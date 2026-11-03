@@ -53,11 +53,16 @@ p { margin: 0 0 1.1em; }
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,0)); transition: opacity .35s;
 }
-.site-header.solid, body.no-hero .site-header {
-  background: color-mix(in srgb, var(--bg) 92%, transparent); color: var(--text);
+/* deckender Hintergrund als eigene Ebene: ein backdrop-filter direkt am Header
+   würde das fixierte Handy-Menü auf die Höhe des Headers einsperren */
+.site-header::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px);
-  box-shadow: 0 1px 0 var(--line);
+  box-shadow: 0 1px 0 var(--line); transition: opacity .35s var(--ease);
 }
+.site-header.solid, body.no-hero .site-header { color: var(--text); }
+.site-header.solid::after, body.no-hero .site-header::after { opacity: 1; }
 .site-header.solid::before, body.no-hero .site-header::before { opacity: 0; }
 .logo { font-weight: 600; font-size: 20px; letter-spacing: .04em; white-space: nowrap; }
 .nav { display: flex; align-items: center; gap: clamp(16px, 2.6vw, 36px); font-size: 14px; font-weight: 400; letter-spacing: .06em; }
