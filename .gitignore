@@ -1,0 +1,5 @@
+# Original-Downloads von Squarespace (nur lokale Sicherung)
+_import/
+.DS_Store
+__pycache__/
+.claude/
