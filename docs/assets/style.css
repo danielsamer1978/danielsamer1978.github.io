@@ -64,7 +64,7 @@ p { margin: 0 0 1.1em; }
 .site-header.solid, body.no-hero .site-header { color: var(--text); }
 .site-header.solid::after, body.no-hero .site-header::after { opacity: 1; }
 .site-header.solid::before, body.no-hero .site-header::before { opacity: 0; }
-.logo { font-weight: 600; font-size: 20px; letter-spacing: .04em; white-space: nowrap; }
+.logo { font-weight: 600; font-size: 24px; letter-spacing: .04em; white-space: nowrap; }
 .nav { display: flex; align-items: center; gap: clamp(16px, 2.6vw, 36px); font-size: 14px; font-weight: 400; letter-spacing: .06em; }
 .nav a { position: relative; padding: 4px 0; }
 .nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
@@ -77,7 +77,7 @@ p { margin: 0 0 1.1em; }
 
 @media (max-width: 760px) {
   :root { --header-h: 60px; }
-  .logo { font-size: 17px; position: relative; z-index: 2; }
+  .logo { font-size: 19px; position: relative; z-index: 2; }
   .hero-text h1 br { display: none; }
   .menu-btn { display: block; position: relative; z-index: 2; }
   .nav {
@@ -101,7 +101,7 @@ p { margin: 0 0 1.1em; }
 .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: hero-in 1.6s var(--ease) both; }
 .hero::after { content: ""; position: absolute; inset: 0; background: var(--overlay); }
 .hero-text { position: absolute; left: var(--gutter); right: var(--gutter); bottom: clamp(32px, 7vh, 80px); z-index: 1; }
-.hero-text h1 { font-size: clamp(32px, 5.6vw, 76px); letter-spacing: .01em; }
+.hero-text h1 { font-size: clamp(28px, 4.4vw, 60px); letter-spacing: .01em; }
 .hero-text .eyebrow { color: rgba(255,255,255,.85); margin-bottom: 14px; }
 .hero-text a.more { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; font-size: 14px; letter-spacing: .08em; border-bottom: 1px solid rgba(255,255,255,.6); padding-bottom: 4px; }
 .scroll-hint { position: absolute; right: var(--gutter); bottom: clamp(32px, 7vh, 80px); z-index: 1; font-size: 12px; letter-spacing: .16em; writing-mode: vertical-rl; opacity: .8; }
