@@ -174,7 +174,7 @@ def build_home():
   {img("ur-be05c8.jpg", "Berglandschaft in Uri – Szene aus UR", "100vw", eager=True)}
   <div class="hero-text">
     <div class="eyebrow">Daniel Samer · Kameramann &amp; Fotograf · München</div>
-    <h1>Dokumentarische Kamera – <br>für Kino, Serie und Imagefilm.</h1>
+    <h1>Dokumentarisch erzählen – <br>für Kino, Serie und Imagefilm.</h1>
     <a class="more" href="#kamera">Arbeiten ansehen ↓</a>
   </div>
 </section>
