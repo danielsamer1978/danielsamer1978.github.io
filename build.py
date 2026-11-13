@@ -410,6 +410,10 @@ def build_extras():
             f'<body><a href="{new}">Weiter zur Seite</a></body></html>\n')
     # GitHub Pages: keine Jekyll-Verarbeitung; eigene Domain, sobald umgestellt
     open(os.path.join(OUT, ".nojekyll"), "w").write("")
+    # Bestätigung für die Google Search Console (Datei muss dauerhaft bleiben)
+    gsc = SITE.get("google_verification")
+    if gsc:
+        open(os.path.join(OUT, gsc), "w").write(f"google-site-verification: {gsc}")
     cname = os.path.join(OUT, "CNAME")
     if SITE.get("live"):
         open(cname, "w").write(SITE["url"].split("//")[1] + "\n")
