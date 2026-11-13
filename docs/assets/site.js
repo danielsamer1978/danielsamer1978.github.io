@@ -39,6 +39,8 @@
     f.allow = "autoplay; fullscreen; picture-in-picture";
     f.allowFullscreen = true;
     f.title = title || "Video";
+    // Videostart in der Besucherstatistik zählen
+    window.goatcounter?.count?.({ path: "video/" + id, title: "Video: " + f.title, event: true });
     return f;
   };
   document.querySelectorAll(".video > button").forEach(btn => {
